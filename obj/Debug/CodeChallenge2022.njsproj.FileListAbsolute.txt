@@ -1,0 +1,3 @@
+D:\Users\harry\source\repos\CodeChallenge2022\obj\Debug\CodeChallenge2022.njsproj.AssemblyReference.cache
+D:\Users\harry\source\repos\CodeChallenge2022\obj\Debug\CodeChallenge2022.njsproj.CoreCompileInputs.cache
+D:\Users\harry\source\repos\CodeChallenge2022\bin\Microsoft.NodejsTools.WebRole.dll
