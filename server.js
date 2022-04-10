@@ -1,12 +1,10 @@
 const path = require('path')
 const express = require('express')
-const { GpuScrape } = require('./public/js/webscraper')
+const { GpuScrape } = require('./public/js/gpuWebScraper')
 const app = express()
 const port = 3000
 const fs = require('fs');
 const { raw } = require('express')
-
-const gpuScraper = GpuScrape();
 
 app.set('port', process.env.PORT || 3000);
 
@@ -26,6 +24,15 @@ app.get('', (req, res) => {
 //  Listen on port 3000
 app.listen(port, () => console.info(`Listening on port ${port}`))
 
-let rawData = fs.readFileSync('gpuInfo.json')
-let gpuData = JSON.parse(rawData)
-console.log(gpuData);
+rawData = new GpuScrape();
+//let gpuData = JSON.parse(rawData)
+var jsonContent = JSON.stringify(rawData);
+//console.log(rawData);
+
+fs.writeFile("gpuInfo.json", jsonContent, 'utf8', function (err) {
+    if (err) {
+        console.log("An error occured while writing JSON Object to File.");
+        return console.log(err);
+    }
+    console.log("JSON file has been saved.");
+});
