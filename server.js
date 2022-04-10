@@ -1,25 +1,21 @@
-'use strict';
-
-var port = process.env.PORT || 1337;
-var http = require('http');
-var fs = require('fs');
-
-//const { dirname } = require('path');
-//var path = require('path')
+const path = require('path')
+const express = require('express')
+const app = express()
+const port = 3000
 
 
-function onRequest(request, response) {
-    response.writeHead(200, { 'Content-Type': 'text/html' });
-    fs.readFile('./index.html', null, function (error, data) {
-        if (error) {
-            response.writeHead(404);
-            response.write('File Not Found!');
-        } else {
-            response.write(data);
-        }
-        response.end();
-    });
-}
+// Static Files
+app.use(express.static('public'))
+app.use('/css', express.static(__dirname + 'public/css'))
+app.use('/js', express.static(__dirname + 'public/js'))
+app.use('/img', express.static(__dirname + 'public/img'))
 
-http.createServer(onRequest).listen(1337)
-//server.use(express.static('public'));
+// Set Views
+app.set('views', './views')
+
+app.get('', (req, res) => {
+    res.sendFile(path.join(__dirname + '/index.html'))
+})
+
+//  Listen on port 3000
+app.listen(port, () => console.info(`Listening on port ${port}`))
