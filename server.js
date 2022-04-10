@@ -1,9 +1,14 @@
-
 const path = require('path')
 const express = require('express')
+const { GpuScrape } = require('./public/js/webscraper')
 const app = express()
 const port = 3000
+const fs = require('fs');
+const { raw } = require('express')
 
+const gpuScraper = GpuScrape();
+
+app.set('port', process.env.PORT || 3000);
 
 // Static Files
 app.use(express.static('public'))
@@ -20,3 +25,7 @@ app.get('', (req, res) => {
 
 //  Listen on port 3000
 app.listen(port, () => console.info(`Listening on port ${port}`))
+
+let rawData = fs.readFileSync('gpuInfo.json')
+let gpuData = JSON.parse(rawData)
+console.log(gpuData);
