@@ -1,0 +1,16 @@
+<head>
+</head>
+<body>
+    <div id='results'></div>
+    <script type="text/javascript" src='/js/userInput.js'></script>
+    <script>
+        new getResults();
+        fetch("gpuInfo.json")
+            .then(response => response.json())
+            .then(gpuInfo => {
+                console.log(gpuInfo)
+            })
+        
+    </script>
+    <div id='budget'></div>
+</body>

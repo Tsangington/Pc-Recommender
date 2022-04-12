@@ -25,7 +25,7 @@ function GpuScrape() {
             await page.setViewport({ width: 1366, height: 800 });
             await page.goto('https://www.amazon.co.uk/s?k=geforce+gpu&rh=n%3A340831031%2Cn%3A430500031&dc&crid=1Y5BCLL47Y56C&qid=1649589532&rnid=1642204031&sprefix=%2Caps%2C52&ref=sr_nr_n_2', { waitUntil: 'load', timeout: 30000 });
 
-            for (let i = 3; i < 24; i++) {
+            for (let i = 4; i < 24; i++) {
                 // Selector for the card name
                 let cardName = 'div.s-desktop-width-max.s-desktop-content.s-opposite-dir.sg-row > div.s-matching-dir.sg-col-16-of-20.sg-col.sg-col-8-of-12.sg-col-12-of-16 > div > span:nth-child(4) > div.s-main-slot.s-result-list.s-search-results.sg-row > div:nth-child('+i+') > div > div > div > div > div > div.sg-col.sg-col-4-of-12.sg-col-8-of-16.sg-col-12-of-20.s-list-col-right > div > div > div.a-section.a-spacing-none.s-padding-right-small.s-title-instructions-style > h2 > a > span';
                 let r = await page.waitForSelector(cardName);
@@ -40,7 +40,7 @@ function GpuScrape() {
 
                 //read from existing json file
                 let gpuObject = { "gpuName": nameValue, "gpuPrice": priceValue };
-                let gpuInfojson = fs.readFileSync("gpuInfo.json", "utf-8");
+                let gpuInfojson = fs.readFileSync("/gpuInfo.json", "utf-8");
                 let gpuInfo = JSON.parse(gpuInfojson);
 
                 //push the new gpu listing into the array 
@@ -48,7 +48,8 @@ function GpuScrape() {
 
                 //stringify into JSON notation before writing back into file
                 gpuInfojson = JSON.stringify(gpuInfo,null, 2);
-                fs.writeFileSync("gpuInfo.json", gpuInfojson, "utf-8");
+                //fs.writeFileSync("gpuInfo.json", gpuInfojson, "utf-8");
+                console.log(gpuInfo);
             }
         }
         catch (e) {
@@ -57,4 +58,3 @@ function GpuScrape() {
         }
     })();
 };
-//
