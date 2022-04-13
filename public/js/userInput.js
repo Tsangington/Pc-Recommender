@@ -32,10 +32,24 @@ function getResults() {
     console.log(gpuBudget)
 }
 function getGpu(gpuInfo) {
-    let gpuInfoSorted = gpuInfo.sort((a, b) => parseInt(a.gpuPrice,10) > parseInt(b.gpuPrice,10) ? 1 : -1);
-    console.log(gpuInfoSorted)
-    /*for (var i = 0; i < gpuInfo.length;i++) {
-        console.log(gpuInfo)
-    }*/
+    let resultsList = "";
+    new URLSearchParams(window.location.search).forEach((value,
+        name) => {
+        //resultsList.append(`${name}:${value}, `)
+        resultsList = (resultsList + name + ":" + value + ",")
+    })
+    let words = resultsList.split(',');
 
+    let budget = words[0].substring(7)
+    let gpuBudget = 0.5 * budget;
+
+    let gpuInfoSorted = gpuInfo.sort((a, b) => parseInt(a.gpuPrice, 10) > parseInt(b.gpuPrice, 10) ? 1 : -1);
+    console.log(gpuInfoSorted)
+    //either perform binary search, or search through array until price is above the budget, then return the one below.
+    var i = 0;
+    while (gpuInfoSorted[i].gpuPrice < gpuBudget) {
+        i++;
+    }
+    i -= 1;
+    console.log(gpuInfoSorted[i].gpuPrice);
 }
