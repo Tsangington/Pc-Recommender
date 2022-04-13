@@ -1,4 +1,4 @@
-module.exports = { getResults };
+module.exports = { getResults, getGpu };
 
 function getResults() {
     //let resultsList = document.getElementById('results');
@@ -27,4 +27,15 @@ function getResults() {
     console.log(gpuChoice)
     let overclock = words[6].substring(10)
     console.log(overclock)
+
+    let gpuBudget = 0.5 * budget;
+    console.log(gpuBudget)
+}
+function getGpu(gpuInfo) {
+    let gpuInfoSorted = gpuInfo.sort((a, b) => parseInt(a.gpuPrice,10) > parseInt(b.gpuPrice,10) ? 1 : -1);
+    console.log(gpuInfoSorted)
+    /*for (var i = 0; i < gpuInfo.length;i++) {
+        console.log(gpuInfo)
+    }*/
+
 }

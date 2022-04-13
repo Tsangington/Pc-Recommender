@@ -8,9 +8,8 @@
         fetch("gpuInfo.json")
             .then(response => response.json())
             .then(gpuInfo => {
-                console.log(gpuInfo)
+                gpuRecommend = new getGpu(gpuInfo);
             })
-        
     </script>
     <div id='budget'></div>
 </body>

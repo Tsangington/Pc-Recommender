@@ -1,30 +1,34 @@
 [
   {
-    "gpuName": "MAXSUN NVIDIA GEFORCE GTX 1050 Ti Transformer ITX 4G Video Display Graphics Card GPU 4GB GDDR5, mini ITX Design, DisplayPort, HDMI, DVI-D, Single Fan Cooling System",
-    "gpuPrice": "259."
+    "gpuName": "Gigabyte GeForce GT 1030 OC 2G, Black",
+    "gpuPrice": "106"
   },
   {
-    "gpuName": "Palit NVIDIA GeForce GTX 1050 Ti 4 GB STORMX GDDR5 768 Core 1290 MHz GPU Graphics Card - Black",
-    "gpuPrice": "158."
+    "gpuName": "ASUS TUF Gaming NVIDIA GeForce RTX 3060 Graphics Card (PCIe 4.0, 12 GB GDDR6, HDMI 2.1, DisplayPort 1.4a, Dual ball Fan Bearings, Military-grade Certification, GPU Tweak II",
+    "gpuPrice": "544"
   },
   {
     "gpuName": "Palit GeForce RTX 3080 Ti GameRock 12 GB GDDR6X Graphics Card, 10240 Core, 1365 MHz GPU, 1665 MHz Boost, NVIDIA Ampere, HDMI, DisplayPort x 3, Angel ARGB Lighting, Advanced TurboFan 3.0",
-    "gpuPrice": "1,239."
+    "gpuPrice": "1239"
   },
   {
-    "gpuName": "ASUS TUF Gaming NVIDIA GeForce RTX 3060 Graphics Card (PCIe 4.0, 12 GB GDDR6, HDMI 2.1, DisplayPort 1.4a, Dual ball Fan Bearings, Military-grade Certification, GPU Tweak II)",
-    "gpuPrice": "544."
-  },
-  {
-    "gpuName": "ASUS Dual EVO Gaming GeForce RTX 2060 6GB GDDR6 with the all-new NVIDIA Turingâ„¢ GPU architecture DUAL-RTX2060-6G-EVO",
-    "gpuPrice": "390."
-  },
-  {
-    "gpuName": "Palit GeForce RTX 3060 Dual 12GB GDDR6 Graphics Card, 3584 Core, 1320 MHz GPU, 1777 MHz Boost, Ampere Architecture, 3 x DisplayPort, HDMI, Dual Fans with 0-dB Tech",
-    "gpuPrice": "433."
+    "gpuName": "ASUS Dual EVO Gaming GeForce RTX 2060 6GB GDDR6 with the all-new NVIDIA Turing™ GPU architecture DUAL-RTX2060-6G-EVO",
+    "gpuPrice": "389"
   },
   {
     "gpuName": "Palit GeForce GTX 1650 GamingPro 4 GB GDDR6 Graphics Card, 896 Core, 1410 MHz GPU, 1590 Boost, 2 x DisplayPort, HDMI",
-    "gpuPrice": "198."
+    "gpuPrice": "198"
+  },
+  {
+    "gpuName": "ASUS GeForce Dual RTX 3050 8GB OC Edition Gaming Graphics Card (NVIDIA Ampere, GDDR6 Memory, PCIe 4.0, 1x HDMI 2.1, 3x DisplayPort 1.4a, DUAL-RTX3050-O8G), (3304807664)",
+    "gpuPrice": "339"
+  },
+  {
+    "gpuName": "Gigabyte GeForce RTX 3070 GAMING OC 8GB V2 LHR Graphics Card",
+    "gpuPrice": "739"
+  },
+  {
+    "gpuName": "Gigabyte GeForce RTX 3060 Ti GAMING OC PRO 8GB V3 LHR Graphics Card",
+    "gpuPrice": "619"
   }
 ]
