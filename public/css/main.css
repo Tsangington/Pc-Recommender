@@ -65,3 +65,7 @@ h1 {
 p {
     color: white;
 }
+
+.result {
+    border: 1px solid black;
+}

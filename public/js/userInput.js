@@ -42,5 +42,9 @@ function getGpu(gpuInfo) {
     let gpuResultPrice = document.getElementById('gpuResultPrice')
     gpuResultPrice = gpuResultPrice.append(`${gpuInfoSorted[i].gpuPrice}`);
 
+    //add the rest of the prices when they are implemented.
+    totalPrice = (parseFloat(gpuInfoSorted[i].gpuPrice));
 
+    let resultTotalPrice = document.getElementById('resultTotalPrice')
+    resultTotalPrice = resultTotalPrice.append(totalPrice)
 }
