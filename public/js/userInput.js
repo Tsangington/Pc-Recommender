@@ -1,36 +1,5 @@
-module.exports = { getResults, getGpu };
+module.exports = { getGpu };
 
-function getResults() {
-    //let resultsList = document.getElementById('results');
-    let resultsList = "";
-    //let budget = document.getElementById('budget');
-
-    new URLSearchParams(window.location.search).forEach((value,
-        name) => {
-        //resultsList.append(`${name}:${value}, `)
-        resultsList = (resultsList + name +":"+value+",")
-    })
-    console.log(resultsList)
-    let words = resultsList.split(',');
-
-    let budget = words[0].substring(7)
-    console.log(budget)
-    let resolution = words[1].substring(11)
-    console.log(resolution)
-    let fps = words[2].substring(4)
-    console.log(fps)
-    let performance = words[3].substring(12)
-    console.log(performance)
-    let cpuChoice = words[4].substring(10)
-    console.log(cpuChoice)
-    let gpuChoice = words[5].substring(10)
-    console.log(gpuChoice)
-    let overclock = words[6].substring(10)
-    console.log(overclock)
-
-    let gpuBudget = 0.5 * budget;
-    console.log(gpuBudget)
-}
 function getGpu(gpuInfo) {
     let resultsList = "";
     new URLSearchParams(window.location.search).forEach((value,
@@ -41,7 +10,24 @@ function getGpu(gpuInfo) {
     let words = resultsList.split(',');
 
     let budget = words[0].substring(7)
-    let gpuBudget = 0.5 * budget;
+    let resolution = words[1].substring(11)
+    let fps = words[2].substring(4)
+    let performance = words[3].substring(12)
+    let cpuChoice = words[4].substring(10)
+    let gpuChoice = words[5].substring(10)
+    let overclock = words[6].substring(10)
+
+    let gpuBudget = budget
+    if (performance == "balanced") {
+        gpuBudget = 0.4 * parseFloat(budget)
+    }
+    else if (performance == "gpu") {
+        gpuBudget = 0.5 * parseFloat(budget)
+    }
+    else if (performance == "cpu") {
+        gpuBudget = 0.3 * parseFloat(budget)
+    }
+    console.log(gpuBudget)
 
     let gpuInfoSorted = gpuInfo.sort((a, b) => parseInt(a.gpuPrice, 10) > parseInt(b.gpuPrice, 10) ? 1 : -1);
     console.log(gpuInfoSorted)
@@ -51,5 +37,10 @@ function getGpu(gpuInfo) {
         i++;
     }
     i -= 1;
-    console.log(gpuInfoSorted[i].gpuPrice);
+    let gpuResultName = document.getElementById('gpuResultName');
+    gpuResultName = gpuResultName.append(`${gpuInfoSorted[i].gpuName}`);
+    let gpuResultPrice = document.getElementById('gpuResultPrice')
+    gpuResultPrice = gpuResultPrice.append(`${gpuInfoSorted[i].gpuPrice}`);
+
+
 }
