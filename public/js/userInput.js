@@ -27,7 +27,7 @@ function getGpu(gpuInfo) {
     else if (performance == "cpu") {
         gpuBudget = 0.3 * parseFloat(budget)
     }
-    console.log(gpuBudget)
+    
 
     let gpuInfoSorted = gpuInfo.sort((a, b) => parseInt(a.gpuPrice, 10) > parseInt(b.gpuPrice, 10) ? 1 : -1);
     console.log(gpuInfoSorted)

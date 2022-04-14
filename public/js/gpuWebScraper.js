@@ -37,14 +37,12 @@ function GpuScrape() {
                 let s = await page.waitForSelector(cardPrice);
                 let priceElement = await page.$(cardPrice)
                 var priceValue = await page.evaluate(el => el.textContent, priceElement)
-                console.log(priceValue)
 
                 //removes any commas or fullstops
                 if (priceValue.indexOf(",") != -1) {
                     priceValue = priceValue.replace(",", "");
                 }
                 priceValue = priceValue.slice(0, -1);
-                console.log(priceValue)
 
                 //read from existing json file
                 let gpuObject = { "gpuName": nameValue, "gpuPrice": priceValue };
@@ -55,11 +53,10 @@ function GpuScrape() {
                 gpuInfo.push(gpuObject);
 
                 //stringify into JSON notation before writing back into file
-                gpuInfojson = JSON.stringify(gpuInfo,null, 2);
+                gpuInfojson = JSON.stringify(gpuInfo, null, 2);
+                //code not needed for now, already have test data in file
                 //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/gpuInfo.json, gpuInfojson, "utf-8");
-                console.log(gpuInfo);
             }
-            console.log(gpuInfo);
         }
         catch (e) {
             console.log('Amazon scrap error-> ', e);
