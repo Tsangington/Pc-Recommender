@@ -8,9 +8,17 @@
         fetch("gpuInfo.json")
             .then(response => response.json())
             .then(gpuInfo => {
-                gpuRecommend = new getGpu(gpuInfo);
+                new getGpu(gpuInfo);
             })
-        new getGpu();
+        fetch("cpuInfo.json")
+            .then(response => response.json())
+            .then(cpuInfo => {
+                new getCpu(cpuInfo);
+            })
+        var gpuPrice = document.getElementById("gpuResultPrice").getAttribute("value");
+        var cpuPrice = document.getElementById("cpuResultPrice").getAttribute("value");
+        var totalPrice = gpuPrice + cpuPrice;
+        totalPrice = document.getElementById('resultTotalPrice');
     </script>
     <div class="result" id="gpuResult">
         <u>Graphics Card:</u><br>
