@@ -1,10 +1,11 @@
-module.exports = { getGpu, getCpu };
+module.exports = { getGpu, getCpu, getTotalPrice };
+var gpuPrice;
+var cpuPrice;
 
 function getGpu(gpuInfo) {
     let resultsList = "";
     new URLSearchParams(window.location.search).forEach((value,
         name) => {
-        //resultsList.append(`${name}:${value}, `)
         resultsList = (resultsList + name + ":" + value + ",")
     })
     let words = resultsList.split(',');
@@ -39,14 +40,16 @@ function getGpu(gpuInfo) {
     let gpuResultName = document.getElementById('gpuResultName');
     gpuResultName = gpuResultName.append(`${gpuInfoSorted[i].gpuName}`);
     let gpuResultPrice = document.getElementById('gpuResultPrice')
-    gpuResultPrice = gpuResultPrice.append(`${gpuInfoSorted[i].gpuPrice}`);
+    gpuResultPrice.append(`${gpuInfoSorted[i].gpuPrice}`);
+
+    gpuPrice = gpuInfoSorted[i].gpuPrice;
+    console.log(gpuPrice)
 }
 
 function getCpu(cpuInfo) {
     let resultsList = "";
     new URLSearchParams(window.location.search).forEach((value,
         name) => {
-        //resultsList.append(`${name}:${value}, `)
         resultsList = (resultsList + name + ":" + value + ",")
     })
     let words = resultsList.split(',');
@@ -80,7 +83,15 @@ function getCpu(cpuInfo) {
     i -= 1;
     let cpuResultName = document.getElementById('cpuResultName');
     cpuResultName = cpuResultName.append(`${cpuInfoSorted[i].cpuName}`);
-    let cpuResultPrice = document.getElementById('cpuResultPrice')
-    cpuResultPrice = cpuResultPrice.append(`${cpuInfoSorted[i].cpuPrice}`);
-}
+    var cpuResultPrice = document.getElementById('cpuResultPrice')
+    cpuResultPrice.append(`${cpuInfoSorted[i].cpuPrice}`);
 
+    cpuPrice = cpuInfoSorted[i].cpuPrice;
+    console.log(cpuPrice)
+}
+function getTotalPrice() {
+    let totalPrice =  parseInt(gpuPrice) + parseInt(cpuPrice);
+    console.log(parseInt(totalPrice))
+    let resultTotalPrice = document.getElementById('resultTotalPrice');
+    resultTotalPrice.append(totalPrice);
+}

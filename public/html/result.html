@@ -5,6 +5,7 @@
     <div id='results'></div>
     <script type="text/javascript" src='/js/userInput.js'></script>
     <script>
+
         fetch("gpuInfo.json")
             .then(response => response.json())
             .then(gpuInfo => {
@@ -14,11 +15,8 @@
             .then(response => response.json())
             .then(cpuInfo => {
                 new getCpu(cpuInfo);
+                getTotalPrice();
             })
-        var gpuPrice = document.getElementById("gpuResultPrice").getAttribute("value");
-        var cpuPrice = document.getElementById("cpuResultPrice").getAttribute("value");
-        var totalPrice = gpuPrice + cpuPrice;
-        totalPrice = document.getElementById('resultTotalPrice');
     </script>
     <div class="result" id="gpuResult">
         <u>Graphics Card:</u><br>
@@ -44,3 +42,4 @@
         <div id='resultTotalPrice'>Total Price: &pound;</div>
     </div>
 </body>
+
