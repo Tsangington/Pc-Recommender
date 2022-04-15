@@ -10,12 +10,10 @@ function getGpu(gpuInfo) {
     let words = resultsList.split(',');
 
     let budget = words[0].substring(7)
-    let resolution = words[1].substring(11)
-    let fps = words[2].substring(4)
-    let performance = words[3].substring(12)
-    let cpuChoice = words[4].substring(10)
-    let gpuChoice = words[5].substring(10)
-    let overclock = words[6].substring(10)
+    let performance = words[1].substring(12)
+    let cpuChoice = words[2].substring(10)
+    let gpuChoice = words[3].substring(10)
+    let overclock = words[4].substring(10)
 
     let gpuBudget = budget
     if (performance == "balanced") {
@@ -28,7 +26,6 @@ function getGpu(gpuInfo) {
         gpuBudget = 0.3 * parseFloat(budget)
     }
     
-
     let gpuInfoSorted = gpuInfo.sort((a, b) => parseInt(a.gpuPrice, 10) > parseInt(b.gpuPrice, 10) ? 1 : -1);
     console.log(gpuInfoSorted)
     //either perform binary search, or search through array until price is above the budget, then return the one below.

@@ -1,8 +1,8 @@
 const { json } = require('express');
 const fs = require('fs');
-module.exports = { GeforceGpuScrape , RyzenCpuScrape};
+module.exports = { GpuScrape , CpuScrape};
 
-function GeforceGpuScrape() {
+function GpuScrape() {
     const puppeteer = require('puppeteer');
     (async () => {
         let resultObj = {}
@@ -65,7 +65,7 @@ function GeforceGpuScrape() {
         }
     })();
 };
-function RyzenCpuScrape() {
+function CpuScrape() {
     const puppeteer = require('puppeteer');
     (async () => {
         let resultObj = {}
@@ -118,7 +118,7 @@ function RyzenCpuScrape() {
                 //stringify into JSON notation before writing back into file
                 cpuInfojson = JSON.stringify(cpuInfo, null, 2);
                 //code not needed for now, already have test data in file
-                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/cpuInfo.json", cpuInfojson, "utf-8");
+                fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/cpuInfo.json", cpuInfojson, "utf-8");
                 console.log(cpuInfojson)
             }
         }

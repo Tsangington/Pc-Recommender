@@ -1,0 +1,42 @@
+[
+  {
+    "cpuName": "AMD Ryzen 7 5800X 3.8GHz 32MB L3 Processor",
+    "cpuPrice": "334"
+  },
+  {
+    "cpuName": "AMD Ryzen 7 5700G",
+    "cpuPrice": "257"
+  },
+  {
+    "cpuName": "AMD Ryzen 5 5600X Processor (6C/12T, 35MB Cache, up to 4.6 GHz Max Boost)",
+    "cpuPrice": "200"
+  },
+  {
+    "cpuName": "AMD Ryzen 5 3600 Processor (6C/12T, 35 MB Cache, 4.2 GHz Max Boost)",
+    "cpuPrice": "229"
+  },
+  {
+    "cpuName": "AMD Ryzen 5 5600 Desktop Processor (6-core/12-thread, 35 MB cache, up to 4.4 GHz max boost)",
+    "cpuPrice": "183"
+  },
+  {
+    "cpuName": "AMD YD260XBCAFBOX Ryzen 5 2600X Processor with Wraith Spire Cooler",
+    "cpuPrice": "295"
+  },
+  {
+    "cpuName": "AMD Ryzen 7 3800X - 3.9 GHz - 8-core - 16 threads - 32 MB cache - Socket AM4 - Box",
+    "cpuPrice": "328"
+  },
+  {
+    "cpuName": "AMD Ryzen 9 5900X Processor (12C/24T, 70MB Cache, up to 4.8 GHz Max Boost)",
+    "cpuPrice": "358"
+  },
+  {
+    "cpuName": "AMD Ryzen 3 4100 AM4 Processor",
+    "cpuPrice": "89"
+  }
+  {
+    "cpuName": "AMD Ryzen 5 5500 Zen 3 CPU",
+    "cpuPrice": "144"
+  }
+]
