@@ -1,8 +1,8 @@
 const { json } = require('express');
 const fs = require('fs');
-module.exports = { GpuScrape , CpuScrape};
+module.exports = { GeforceGpuScrape, RyzenCpuScrape };
 
-function GpuScrape() {
+function GeforceGpuScrape() {
     const puppeteer = require('puppeteer');
     (async () => {
         let resultObj = {}
@@ -65,7 +65,7 @@ function GpuScrape() {
         }
     })();
 };
-function CpuScrape() {
+function RyzenCpuScrape() {
     const puppeteer = require('puppeteer');
     (async () => {
         let resultObj = {}
