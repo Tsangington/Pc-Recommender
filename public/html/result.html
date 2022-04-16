@@ -5,16 +5,15 @@
     <div id='results'></div>
     <script type="text/javascript" src='/js/userInput.js'></script>
     <script>
-
-        fetch("gpuInfo.json")
+        fetch("geforceGpuInfo.json")
             .then(response => response.json())
-            .then(gpuInfo => {
-                new getGpu(gpuInfo);
+            .then(geforceGpuInfo => {
+                new getGeforceGpu(geforceGpuInfo);
             })
-        fetch("cpuInfo.json")
+        fetch("ryzenCpuInfo.json")
             .then(response => response.json())
-            .then(cpuInfo => {
-                new getCpu(cpuInfo);
+            .then(ryzenCpuInfo => {
+                new getRyzenCpu(ryzenCpuInfo);
                 getTotalPrice();
             })
     </script>

@@ -1,8 +1,8 @@
-module.exports = { getGpu, getCpu, getTotalPrice };
+module.exports = { getGeforceGpu, getRyzenCpu, getTotalPrice };
 var gpuPrice;
 var cpuPrice;
 
-function getGpu(gpuInfo) {
+function getGeforceGpu(gpuInfo) {
     let resultsList = "";
     new URLSearchParams(window.location.search).forEach((value,
         name) => {
@@ -46,7 +46,7 @@ function getGpu(gpuInfo) {
     console.log(gpuPrice)
 }
 
-function getCpu(cpuInfo) {
+function getRyzenCpu(cpuInfo) {
     let resultsList = "";
     new URLSearchParams(window.location.search).forEach((value,
         name) => {

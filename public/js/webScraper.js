@@ -46,7 +46,7 @@ function GeforceGpuScrape() {
 
                 //read from existing json file
                 let gpuObject = { "gpuName": nameValue, "gpuPrice": priceValue };
-                let gpuInfojson = fs.readFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/gpuInfo.json", "utf-8");
+                let gpuInfojson = fs.readFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/geforceGpuInfo.json", "utf-8");
                 let gpuInfo = JSON.parse(gpuInfojson);
 
                 //push the new gpu listing into the array 
@@ -55,7 +55,7 @@ function GeforceGpuScrape() {
                 //stringify into JSON notation before writing back into file
                 gpuInfojson = JSON.stringify(gpuInfo, null, 2);
                 //code not needed for now, already have test data in file
-                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/gpuInfo.json, gpuInfojson, "utf-8");
+                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/geforceGpuInfo.json, gpuInfojson, "utf-8");
                 console.log(gpuInfojson);
             }
         }
@@ -109,7 +109,7 @@ function RyzenCpuScrape() {
 
                 //read from existing json file
                 let cpuObject = { "cpuName": nameValue, "cpuPrice": priceValue };
-                let cpuInfojson = fs.readFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/cpuInfo.json", "utf-8");
+                let cpuInfojson = fs.readFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/ryzenCpuInfo.json", "utf-8");
                 let cpuInfo = JSON.parse(cpuInfojson);
 
                 //push the new gpu listing into the array 
@@ -118,7 +118,7 @@ function RyzenCpuScrape() {
                 //stringify into JSON notation before writing back into file
                 cpuInfojson = JSON.stringify(cpuInfo, null, 2);
                 //code not needed for now, already have test data in file
-                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/cpuInfo.json", cpuInfojson, "utf-8");
+                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/ryzenCpuInfo.json", cpuInfojson, "utf-8");
                 console.log(cpuInfojson)
             }
         }
