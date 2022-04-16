@@ -30,5 +30,17 @@
   {
     "gpuName": "Gigabyte GeForce RTX 3060 Ti GAMING OC PRO 8GB V3 LHR Graphics Card",
     "gpuPrice": "619"
+  },
+  {
+    "gpuName": "GIGABYTE GeForce RTX 3070 Ti 8 GB GAMING OC Graphics Card",
+    "gpuPrice": "800"
+  },
+  {
+    "gpuName": "MSI GeForce RTX 3080 SUPRIM X LHR 10GB OC GPU",
+    "gpuPrice": "929"
+  },
+  {
+    "gpuName": "ASUS TUF Gaming NVIDIA GeForce RTX 3080 LHR 10GB Ampere Graphics Card",
+    "gpuPrice": "949"
   }
 ]

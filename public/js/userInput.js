@@ -1,6 +1,7 @@
-module.exports = { getGeforceGpu, getRyzenCpu, getTotalPrice };
+module.exports = { getGeforceGpu, getRyzenCpu, getRyzenMobo ,getTotalPrice };
 var gpuPrice;
 var cpuPrice;
+var moboPrice;
 
 function getGeforceGpu(gpuInfo) {
     let resultsList = "";
@@ -60,7 +61,7 @@ function getRyzenCpu(cpuInfo) {
     let gpuChoice = words[3].substring(10)
     let overclock = words[4].substring(10)
 
-    let gpuBudget = budget
+    let cpuBudget = budget
 
     if (performance == "balanced") {
         cpuBudget = 0.1 * parseFloat(budget)
@@ -89,8 +90,41 @@ function getRyzenCpu(cpuInfo) {
     cpuPrice = cpuInfoSorted[i].cpuPrice;
     console.log(cpuPrice)
 }
+function getRyzenMobo(moboInfo) {
+    let resultsList = "";
+    new URLSearchParams(window.location.search).forEach((value,
+        name) => {
+        resultsList = (resultsList + name + ":" + value + ",")
+    })
+    let words = resultsList.split(',');
+
+    let budget = words[0].substring(7)
+    let performance = words[1].substring(12)
+    let cpuChoice = words[2].substring(10)
+    let gpuChoice = words[3].substring(10)
+    let overclock = words[4].substring(10)
+
+    let moboBudget = 0.1 * parseFloat(budget)
+
+    let moboInfoSorted = moboInfo.sort((a, b) => parseInt(a.moboPrice, 10) > parseInt(b.moboPrice, 10) ? 1 : -1);
+    console.log(moboInfoSorted)
+
+    //either perform binary search, or search through array until price is above the budget, then return the one below.
+    var i = 0;
+    while (moboInfoSorted[i].moboPrice <= moboBudget) {
+        i++;
+    }
+    i -= 1;
+    let moboResultName = document.getElementById('moboResultName');
+    moboResultName = moboResultName.append(`${moboInfoSorted[i].moboName}`);
+    var moboResultPrice = document.getElementById('moboResultPrice')
+    moboResultPrice.append(`${moboInfoSorted[i].moboPrice}`);
+
+    moboPrice = moboInfoSorted[i].moboPrice;
+    console.log(moboPrice);
+}
 function getTotalPrice() {
-    let totalPrice =  parseInt(gpuPrice) + parseInt(cpuPrice);
+    let totalPrice =  parseInt(gpuPrice) + parseInt(cpuPrice) + parseInt(moboPrice);
     console.log(parseInt(totalPrice))
     let resultTotalPrice = document.getElementById('resultTotalPrice');
     resultTotalPrice.append(totalPrice);
