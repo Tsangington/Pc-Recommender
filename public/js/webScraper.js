@@ -182,7 +182,7 @@ function RyzenMoboScrape() {
                 //stringify into JSON notation before writing back into file
                 moboInfojson = JSON.stringify(moboInfo, null, 2);
                 //code not needed for now, already have test data in file
-                fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/ryzenMoboInfo.json", moboInfojson, "utf-8");
+                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/ryzenMoboInfo.json", moboInfojson, "utf-8");
                 console.log(moboInfojson)
             }
         }

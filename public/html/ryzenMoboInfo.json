@@ -26,29 +26,5 @@
   {
     "moboName": "ASUS TUF Gaming X570-Plus (Wi-Fi) ATX Motherboard, AMD Socket AM4, AM4, Ryzen 3000, 12+2 Dr. MOS, PCIe 4.0, M.2, DDR4, LAN, HDMI, DP, USB 3.2, Aura Sync RGB , Black",
     "moboPrice": "191"
-  },
-  {
-    "moboName": "MSI MAG B550 TOMAHAWK Motherboard ATX, AM4, DDR4, Dual M.2, LAN, USB 3.2 Gen2, Front Type-C, Mystic Light RGB, HDMI, DisplayPort, AMD Ryzen 5000 Series Processor",
-    "moboPrice": "129"
-  },
-  {
-    "moboName": "MSI B450 TOMAHAWK MAX Motherboard ATX, AM4, DDR4, LAN, USB 3.2 Gen2, TYPE-C, M.2, RGB Mystic Light Sync, HDMI, DVI-D, AMD RYZEN 1st, 2nd and 3rd Gen Ready",
-    "moboPrice": "84"
-  },
-  {
-    "moboName": "MSI B450 TOMAHAWK MAX II Motherboard ATX, AM4, DDR4, LAN, USB 3.2 Gen2, TYPE-C, M.2, RGB Mystic Light Sync, HDMI, DVI-D, AMD RYZEN 1st, 2nd and 3rd Gen Ready",
-    "moboPrice": "81"
-  },
-  {
-    "moboName": "MSI MAG B550 TOMAHAWK Motherboard ATX, AM4, DDR4, Dual M.2, LAN, USB 3.2 Gen2, Front Type-C, Mystic Light RGB, HDMI, DisplayPort, AMD Ryzen 5000 Series Processor",
-    "moboPrice": "129"
-  },
-  {
-    "moboName": "MSI B450 TOMAHAWK MAX Motherboard ATX, AM4, DDR4, LAN, USB 3.2 Gen2, TYPE-C, M.2, RGB Mystic Light Sync, HDMI, DVI-D, AMD RYZEN 1st, 2nd and 3rd Gen Ready",
-    "moboPrice": "84"
-  },
-  {
-    "moboName": "MSI B450 TOMAHAWK MAX II Motherboard ATX, AM4, DDR4, LAN, USB 3.2 Gen2, TYPE-C, M.2, RGB Mystic Light Sync, HDMI, DVI-D, AMD RYZEN 1st, 2nd and 3rd Gen Ready",
-    "moboPrice": "81"
   }
 ]

@@ -36,6 +36,10 @@ function getGeforceGpu(gpuInfo) {
     var i = 0;
     while (gpuInfoSorted[i].gpuPrice <= gpuBudget) {
         i++;
+        if (i + 1 == gpuInfoSorted.length) {
+            i++;
+            break;
+        }
     }
     i -= 1;
     let gpuResultName = document.getElementById('gpuResultName');
@@ -80,6 +84,10 @@ function getRyzenCpu(cpuInfo) {
     var i = 0;
     while (cpuInfoSorted[i].cpuPrice <= cpuBudget) {
         i++;
+        if (i + 1 == cpuInfoSorted.length) {
+            i++;
+            break;
+        }
     }
     i -= 1;
     let cpuResultName = document.getElementById('cpuResultName');
@@ -113,6 +121,10 @@ function getRyzenMobo(moboInfo) {
     var i = 0;
     while (moboInfoSorted[i].moboPrice <= moboBudget) {
         i++;
+        if (i + 1 == moboInfoSorted.length) {
+            i++;
+            break;
+        }
     }
     i -= 1;
     let moboResultName = document.getElementById('moboResultName');
