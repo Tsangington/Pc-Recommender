@@ -13,9 +13,6 @@ function getGeforceGpu(gpuInfo) {
 
     let budget = words[0].substring(7)
     let performance = words[1].substring(12)
-    let cpuChoice = words[2].substring(10)
-    let gpuChoice = words[3].substring(10)
-    let overclock = words[4].substring(10)
 
     let gpuBudget = budget
 
@@ -61,9 +58,6 @@ function getRyzenCpu(cpuInfo) {
 
     let budget = words[0].substring(7)
     let performance = words[1].substring(12)
-    let cpuChoice = words[2].substring(10)
-    let gpuChoice = words[3].substring(10)
-    let overclock = words[4].substring(10)
 
     let cpuBudget = budget
 
@@ -105,12 +99,7 @@ function getRyzenMobo(moboInfo) {
         resultsList = (resultsList + name + ":" + value + ",")
     })
     let words = resultsList.split(',');
-
     let budget = words[0].substring(7)
-    let performance = words[1].substring(12)
-    let cpuChoice = words[2].substring(10)
-    let gpuChoice = words[3].substring(10)
-    let overclock = words[4].substring(10)
 
     let moboBudget = 0.1 * parseFloat(budget)
 
