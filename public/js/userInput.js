@@ -35,11 +35,11 @@ function getGeforceGpu(gpuInfo) {
     //either perform binary search, or search through array until price is above the budget, then return the one below.
     var i = 0;
     while (gpuInfoSorted[i].gpuPrice <= gpuBudget) {
-        i++;
         if (i + 1 == gpuInfoSorted.length) {
             i++;
             break;
         }
+        i++;
     }
     i -= 1;
     let gpuResultName = document.getElementById('gpuResultName');
@@ -83,11 +83,11 @@ function getRyzenCpu(cpuInfo) {
     //either perform binary search, or search through array until price is above the budget, then return the one below.
     var i = 0;
     while (cpuInfoSorted[i].cpuPrice <= cpuBudget) {
-        i++;
         if (i + 1 == cpuInfoSorted.length) {
             i++;
             break;
         }
+        i++;
     }
     i -= 1;
     let cpuResultName = document.getElementById('cpuResultName');
@@ -120,11 +120,12 @@ function getRyzenMobo(moboInfo) {
     //either perform binary search, or search through array until price is above the budget, then return the one below.
     var i = 0;
     while (moboInfoSorted[i].moboPrice <= moboBudget) {
-        i++;
+
         if (i + 1 == moboInfoSorted.length) {
             i++;
             break;
         }
+        i++;
     }
     i -= 1;
     let moboResultName = document.getElementById('moboResultName');

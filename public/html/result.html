@@ -6,22 +6,54 @@
     <div id='results'></div>
     <script type="text/javascript" src='/js/userInput.js'></script>
     <script>
-        fetch("geforceGpuInfo.json")
-            .then(response => response.json())
-            .then(geforceGpuInfo => {
-                new getGeforceGpu(geforceGpuInfo);
-            })
-        fetch("ryzenCpuInfo.json")
-            .then(response => response.json())
-            .then(ryzenCpuInfo => {
-                new getRyzenCpu(ryzenCpuInfo);
-            })
-        fetch("ryzenMoboInfo.json")
-            .then(response => response.json())
-            .then(ryzenMoboInfo => {
-                new getRyzenMobo(ryzenMoboInfo);
-                getTotalPrice();
-            })
+        let resultsList = "";
+        new URLSearchParams(window.location.search).forEach((value,
+            name) => {
+            resultsList = (resultsList + name + ":" + value + ",")
+        })
+        let words = resultsList.split(',');
+
+        let budget = words[0].substring(7)
+        let performance = words[1].substring(12)
+        let cpuChoice = words[2].substring(10)
+        let gpuChoice = words[3].substring(10)
+        let overclock = words[4].substring(10)
+
+        if (gpuChoice == "geforce") {
+            fetch("geforceGpuInfo.json")
+                .then(response => response.json())
+                .then(geforceGpuInfo => {
+                    new getGeforceGpu(geforceGpuInfo);
+                })
+        }
+        else if (gpuChoice == "radeon") {
+            //new getRadeonGpu(radeonGpuInfo)
+        }
+        else {
+            //append one list to another so both are merged
+        }
+
+        if (cpuChoice == "amd") { //moherboard also depends on cpu
+            fetch("ryzenCpuInfo.json")
+                .then(response => response.json())
+                .then(ryzenCpuInfo => {
+                    new getRyzenCpu(ryzenCpuInfo);
+                })
+            fetch("ryzenMoboInfo.json")
+                .then(response => response.json())
+                .then(ryzenMoboInfo => {
+                    new getRyzenMobo(ryzenMoboInfo);
+                    getTotalPrice();
+                })
+        }
+        else if (cpuChoice == "intel") {
+            //new getIntelCpu(intelCpuInfo);
+            //new getIntelMobo(intelMoboInfo);
+        }
+        else {
+            //merge cpu files, choose cpu closest to budget, find intel or ryzen cpu, choose
+            //mobo depending on choice of algorithm.
+        }
     </script>
     <div class="result" id="gpuResult">
         <u>Graphics Card:</u><br>
