@@ -2,6 +2,7 @@
     <link rel="stylesheet" href="/css/bootstrap.css" />
     <link rel="stylesheet" href="/css/main.css" />
 </head>
+
 <body>
     <script type="text/javascript" src='/js/userInput.js'></script>
     <script>
@@ -16,6 +17,9 @@
         let gpuChoice = words[3].substring(10)
         let overclock = words[4].substring(10)
 
+        //very inefficient use of methods. new getParts();? use same function multiple times,
+        //sort info by price, find price to the budget, display.
+        // or getGpu();,getCpu();, getMobo();, shorten to 3 methods?
         if (gpuChoice == "geforce") {
             fetch("geforceGpuInfo.json")
                 .then(response => response.json())
@@ -24,7 +28,11 @@
                 })
         }
         else if (gpuChoice == "radeon") {
-            //new getRadeonGpu(radeonGpuInfo)
+            fetch("radeonGpuInfo.json")
+                .then(response => response.json())
+                .then(radeonGpuInfo => {
+                    new getRadeonGpu(radeonGpuInfo);
+                })
         }
         else {
             //append one list to another so both are merged
@@ -59,6 +67,7 @@
                     <a href="">Pc build recommender</a>
                     <a href="builder.html">Pc builder</a>
                     <a href="peripheral.html">Peripheral Recommender</a>
+                    <div class="navSign">Code Challenge 2022 - PC recommender</div>
                 </div>
             </div>
         </div>

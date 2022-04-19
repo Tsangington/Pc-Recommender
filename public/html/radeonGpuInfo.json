@@ -1,0 +1,58 @@
+[
+  {
+    "gpuName": "MSI Gaming Radeon RX 6700 XT 192-bit 12GB GDDR6 DP/HDMI Dual Torx 3.0 Fans FreeSync DirectX 12 VR Ready Graphics Card (RX 6700 XT MECH 2X 12G)",
+    "gpuPrice": "599"
+  },
+  {
+    "gpuName": "ASUSTEK - VIDEO CARDS TUF RX 6700 XT O12G GAMING 90YV0G80-M0NA00",
+    "gpuPrice": "779"
+  },
+  {
+    "gpuName": "Gigabyte Radeon RX 6700 XT EAGLE 12GB Graphics Card",
+    "gpuPrice": "665"
+  },
+  {
+    "gpuName": "ROG-STRIX-RX6600XT-O8G-GAMING OC EDITION 8GB GDDR6 HDMI 2.1 D",
+    "gpuPrice": "534"
+  },
+  {
+    "gpuName": "PULSE AMD RADEON RX 6600 GAMING 8GB GDDR6 HDMI / 3 DP",
+    "gpuPrice": "366"
+  },
+  {
+    "gpuName": "Powercolor Fighter AMD Radeon RX 6600 XT Gaming Graphics Card with 8GB GDDR6 Memory, Powered by AMD RDNA 2, HDMI 2.1 (AXRX 6600XT 8GBD6-3DH)",
+    "gpuPrice": "459"
+  },
+  {
+    "gpuName": "Gigabyte Radeon RX 6600 XT GAMING OC 8GB Graphics Card",
+    "gpuPrice": "359"
+  },
+  {
+    "gpuName": "MSI Radeon RX 6500 XT MECH 2X 4G OC Gaming Graphics Card - GPU 2685/2825 MHz, 4000MB DDR6 Memory, (V508-003R)",
+    "gpuPrice": "169"
+  },
+  {
+    "gpuName": "GIGABYTE Radeon RX 6500 XT Gaming OC 4G Graphics Card, WINDFORCE 3X Cooling System, 4GB 64-bit GDDR6, GV-R65XTGAMING OC-4GD Video Card",
+    "gpuPrice": "229"
+  },
+  {
+    "gpuName": "MAXSUN AMD Radeon RX 550 4GB GDDR5 ITX Computer PC Gaming Video Graphics Card GPU 128-Bit DirectX 12 PCI Express x16 3.0 DVI-D Dual Link, HDMI, DisplayPort",
+    "gpuPrice": "141"
+  },
+  {
+    "gpuName": "Gigabyte AORUS Radeon RX 6800 XT MASTER 16GB Graphics Card",
+    "gpuPrice": "1180"
+  },
+  {
+    "gpuName": "XFX SPEEDSTER SWFT319 AMD Radeon™ RX 6800 CORE Gaming Graphics Card with 16GB GDDR6, AMD RDNA™ 2 (RX-68XLAQFD9)",
+    "gpuPrice": "720"
+  },
+  {
+    "gpuName": "Sapphire TOXIC RADEON RX 6900 XT GAMING OC 16GB GDDR6 HDMI 3 DP LITE,11308-13-20G",
+    "gpuPrice": "1447"
+  },
+  {
+    "gpuName": "MSI RADEON RX 6900 XT GAMING Z TRIO 16G Graphics Card ‘16 GB GDDR6, Core Count 5120, Boost Clock 2425 MHz, RGB Mystic Light, 3x DisplayPort, HDMI, Tri Frozr 2 Fan Cooling System, PCI-E Gen4 x16, AMD'",
+    "gpuPrice": "1335"
+  }
+]

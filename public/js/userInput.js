@@ -1,4 +1,4 @@
-module.exports = { getGeforceGpu, getRyzenCpu, getRyzenMobo ,getTotalPrice };
+module.exports = { getGeforceGpu,getRadeonGpu, getRyzenCpu, getRyzenMobo ,getTotalPrice };
 var gpuPrice;
 var cpuPrice;
 var moboPrice;
@@ -26,6 +26,50 @@ function getGeforceGpu(gpuInfo) {
         gpuBudget = 0.3 * parseFloat(budget)
     }
     
+    let gpuInfoSorted = gpuInfo.sort((a, b) => parseInt(a.gpuPrice, 10) > parseInt(b.gpuPrice, 10) ? 1 : -1);
+    console.log(gpuInfoSorted)
+
+    //either perform binary search, or search through array until price is above the budget, then return the one below.
+    var i = 0;
+    while (gpuInfoSorted[i].gpuPrice <= gpuBudget) {
+        if (i + 1 == gpuInfoSorted.length) {
+            i++;
+            break;
+        }
+        i++;
+    }
+    i -= 1;
+    let gpuResultName = document.getElementById('gpuResultName');
+    gpuResultName = gpuResultName.append(`${gpuInfoSorted[i].gpuName}`);
+    let gpuResultPrice = document.getElementById('gpuResultPrice')
+    gpuResultPrice.append(`${gpuInfoSorted[i].gpuPrice}`);
+
+    gpuPrice = gpuInfoSorted[i].gpuPrice;
+    console.log(gpuPrice)
+}
+function getRadeonGpu(gpuInfo) {
+    let resultsList = "";
+    new URLSearchParams(window.location.search).forEach((value,
+        name) => {
+        resultsList = (resultsList + name + ":" + value + ",")
+    })
+    let words = resultsList.split(',');
+
+    let budget = words[0].substring(7)
+    let performance = words[1].substring(12)
+
+    let gpuBudget = budget
+
+    if (performance == "balanced") {
+        gpuBudget = 0.4 * parseFloat(budget)
+    }
+    else if (performance == "gpu") {
+        gpuBudget = 0.5 * parseFloat(budget)
+    }
+    else if (performance == "cpu") {
+        gpuBudget = 0.3 * parseFloat(budget)
+    }
+
     let gpuInfoSorted = gpuInfo.sort((a, b) => parseInt(a.gpuPrice, 10) > parseInt(b.gpuPrice, 10) ? 1 : -1);
     console.log(gpuInfoSorted)
 
@@ -92,6 +136,7 @@ function getRyzenCpu(cpuInfo) {
     cpuPrice = cpuInfoSorted[i].cpuPrice;
     console.log(cpuPrice)
 }
+
 function getRyzenMobo(moboInfo) {
     let resultsList = "";
     new URLSearchParams(window.location.search).forEach((value,
