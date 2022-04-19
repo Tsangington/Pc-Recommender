@@ -52,7 +52,11 @@
                 })
         }
         else if (cpuChoice == "intel") {
-            //new getIntelCpu(intelCpuInfo);
+            fetch("intelCpuInfo.json")
+                .then(response => response.json())
+                .then(intelCpuInfo => {
+                    new getIntelCpu(intelCpuInfo);
+                })
             //new getIntelMobo(intelMoboInfo);
         }
         else {

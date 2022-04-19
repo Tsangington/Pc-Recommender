@@ -1,6 +1,6 @@
 const path = require('path')
 const express = require('express')
-const { GeforceGpuScrape,RadeonGpuScrape, RyzenCpuScrape, RyzenMoboScrape } = require('./public/js/webScraper.js')
+const { GeforceGpuScrape, RadeonGpuScrape, RyzenCpuScrape, IntelCpuScrape, RyzenMoboScrape } = require('./public/js/webScraper.js')
 const app = express()
 const port = 3000
 
@@ -22,8 +22,9 @@ app.get('', (req, res) => {
 
 //new GeforceGpuScrape();
 //new RyzenCpuScrape();
+new IntelCpuScrape();
 //new RyzenMoboScrape();
-new RadeonGpuScrape();
+//new RadeonGpuScrape();
 
 //  Listen on port 3000
 app.listen(port, () => console.info(`Listening on port ${port}`))

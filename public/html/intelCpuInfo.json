@@ -1,0 +1,38 @@
+[
+  {
+    "cpuName": "Intel Core i7 9700K 3.6GHz Octa Core LGA1151 CPU",
+    "cpuPrice": "308"
+  },
+  {
+    "cpuName": "Intel CORE I5-9600K 3.7 GHZ SKT1151 9MB CACHE BOXED - BX80684I59600K (Components > Processors CPU)",
+    "cpuPrice": "209"
+  },
+  {
+    "cpuName": "CPU Intel Core i9-10900X 2066 Cascade BX",
+    "cpuPrice": "572"
+  },
+  {
+    "cpuName": "Intel Core i5-9400F 2.9GHz LGA1151 9M Cache BOX CPU",
+    "cpuPrice": "141"
+  },
+  {
+    "cpuName": "INTEL - CLIENT CPU CORE I7-12700KF 3.60GHZ SKTLGA1700 25.00MB CACHE BOXED",
+    "cpuPrice": "375"
+  },
+  {
+    "cpuName": "Intel CPU/Core i5-12400 4.40GHZ LGA1700 Tray",
+    "cpuPrice": "186"
+  },
+  {
+    "cpuName": "Intel CPU BX8070110100F Core i3-10100F / 3.6GHz / 6MB LGA1200 4C / 8T",
+    "cpuPrice": "73"
+  },
+  {
+    "cpuName": "Intel BX80662I56600K Core i5-6600K LGA1151 3.5 - 3.9 GHz CPU",
+    "cpuPrice": "165"
+  },
+  {
+    "cpuName": "Intel Core i5-7600K 3.8 GHz QuadCore 6 MB Cache CPU - Black",
+    "cpuPrice": "225"
+  }
+]
