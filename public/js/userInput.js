@@ -1,7 +1,8 @@
-module.exports = { getGeforceGpu,getRadeonGpu, getRyzenCpu,getIntelCpu, getRyzenMobo ,getIntelMobo,getTotalPrice };
+module.exports = { getGeforceGpu,getRadeonGpu, getRyzenCpu,getIntelCpu, getRyzenMobo ,getIntelMobo,getRam,getTotalPrice };
 var gpuPrice;
 var cpuPrice;
 var moboPrice;
+var ramPrice;
 
 function getGeforceGpu(gpuInfo) {
     let resultsList = "";
@@ -17,13 +18,13 @@ function getGeforceGpu(gpuInfo) {
     let gpuBudget = budget
 
     if (performance == "balanced") {
-        gpuBudget = 0.4 * parseFloat(budget)
-    }
-    else if (performance == "gpu") {
         gpuBudget = 0.5 * parseFloat(budget)
     }
+    else if (performance == "gpu") {
+        gpuBudget = 0.6 * parseFloat(budget)
+    }
     else if (performance == "cpu") {
-        gpuBudget = 0.3 * parseFloat(budget)
+        gpuBudget = 0.4 * parseFloat(budget)
     }
     
     let gpuInfoSorted = gpuInfo.sort((a, b) => parseInt(a.gpuPrice, 10) > parseInt(b.gpuPrice, 10) ? 1 : -1);
@@ -61,13 +62,13 @@ function getRadeonGpu(gpuInfo) {
     let gpuBudget = budget
 
     if (performance == "balanced") {
-        gpuBudget = 0.4 * parseFloat(budget)
-    }
-    else if (performance == "gpu") {
         gpuBudget = 0.5 * parseFloat(budget)
     }
+    else if (performance == "gpu") {
+        gpuBudget = 0.6 * parseFloat(budget)
+    }
     else if (performance == "cpu") {
-        gpuBudget = 0.3 * parseFloat(budget)
+        gpuBudget = 0.4 * parseFloat(budget)
     }
 
     let gpuInfoSorted = gpuInfo.sort((a, b) => parseInt(a.gpuPrice, 10) > parseInt(b.gpuPrice, 10) ? 1 : -1);
@@ -106,13 +107,13 @@ function getRyzenCpu(cpuInfo) {
     let cpuBudget = budget
 
     if (performance == "balanced") {
-        cpuBudget = 0.1 * parseFloat(budget)
+        cpuBudget = 0.15 * parseFloat(budget)
     }
     else if (performance == "gpu") {
-        cpuBudget = 0.08 * parseFloat(budget)
+        cpuBudget = 0.1 * parseFloat(budget)
     }
     else if (performance == "cpu") {
-        cpuBudget = 0.15 * parseFloat(budget)
+        cpuBudget = 0.2 * parseFloat(budget)
     }
 
     let cpuInfoSorted = cpuInfo.sort((a, b) => parseInt(a.cpuPrice, 10) > parseInt(b.cpuPrice, 10) ? 1 : -1);
@@ -150,14 +151,15 @@ function getIntelCpu(cpuInfo) {
     let cpuBudget = budget
 
     if (performance == "balanced") {
-        cpuBudget = 0.1 * parseFloat(budget)
-    }
-    else if (performance == "gpu") {
-        cpuBudget = 0.08 * parseFloat(budget)
-    }
-    else if (performance == "cpu") {
         cpuBudget = 0.15 * parseFloat(budget)
     }
+    else if (performance == "gpu") {
+        cpuBudget = 0.1 * parseFloat(budget)
+    }
+    else if (performance == "cpu") {
+        cpuBudget = 0.2 * parseFloat(budget)
+    }
+
 
     let cpuInfoSorted = cpuInfo.sort((a, b) => parseInt(a.cpuPrice, 10) > parseInt(b.cpuPrice, 10) ? 1 : -1);
     console.log(cpuInfoSorted)

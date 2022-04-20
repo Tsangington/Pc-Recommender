@@ -42,5 +42,9 @@
   {
     "gpuName": "ASUS TUF Gaming NVIDIA GeForce RTX 3080 LHR 10GB Ampere Graphics Card",
     "gpuPrice": "949"
+  },
+  {
+    "gpuName": "ASUS TUF Gaming GeForce RTX 3080 Ti OC 12GB GDDR6X Graphics Card",
+    "gpuPrice": "1072"
   }
 ]
