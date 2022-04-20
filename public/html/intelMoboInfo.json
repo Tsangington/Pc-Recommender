@@ -1,0 +1,18 @@
+[
+  {
+    "moboName": "MSI MPG Z590 GAMING PLUS Motherboard ATX - Supports Intel Core 11th Gen Processors, LGA 1200 - Mystic Light, DDR4 Boost (5333MHz/OC), 2 x PCIe 4.0 x16, 3 x M.2 Gen4/3 x4, Wi-Fi 6E",
+    "moboPrice": "149"
+  },
+  {
+    "moboName": "MSI Z490-A PRO Motherboard ATX, LGA1200, DDR4, LAN, USB 3.2 Gen2, Type C, M.2, DisplayPort, HDMI, Gen 4 Ready, 10th Gen Intel Core",
+    "moboPrice": "99"
+  },
+  {
+    "moboName": "MSI H510M-A PRO Micro-ATX Professional Motherboard (10th/11th Gen Intel Core, LGA 1200 Socket, DDR4, 3200MHz, M.2 Slot, USB 3.2 Gen 2, Type-A, 1G LAN, DP/HDMI)",
+    "moboPrice": "59"
+  },
+  {
+    "moboName": "ASRock Z690 PRO RS ATX 1700 SOCKET 4 DDR4",
+    "moboPrice": "206"
+  }
+]

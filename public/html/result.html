@@ -57,7 +57,12 @@
                 .then(intelCpuInfo => {
                     new getIntelCpu(intelCpuInfo);
                 })
-            //new getIntelMobo(intelMoboInfo);
+            fetch("intelMoboInfo.json")
+                .then(response => response.json())
+                .then(intelMoboInfo => {
+                    new getIntelMobo(intelMoboInfo);
+                    getTotalPrice();
+                })
         }
         else {
             //merge cpu files, choose cpu closest to budget, find intel or ryzen cpu, choose

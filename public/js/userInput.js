@@ -1,4 +1,4 @@
-module.exports = { getGeforceGpu,getRadeonGpu, getRyzenCpu,getIntelCpu, getRyzenMobo ,getTotalPrice };
+module.exports = { getGeforceGpu,getRadeonGpu, getRyzenCpu,getIntelCpu, getRyzenMobo ,getIntelMobo,getTotalPrice };
 var gpuPrice;
 var cpuPrice;
 var moboPrice;
