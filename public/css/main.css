@@ -5,21 +5,31 @@
     font-family: "Open Sans", sans-serif;
 }
 * {
+    padding:0px;
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
 }
-
+.container-fluid{
+    padding:0px;
+}
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .topnav {
+    display:flex;
+    font-weight: 400;
+    padding: 12px 0px;
+    font-size: 1.1rem;
+    color: #fff;
     overflow: hidden;
     background-color: #333;
+    height: 150px;
+    align-items: center;
+    justify-content:center
 }
-
 .topnav a {
     font-size:20px;
     float: left;
@@ -36,15 +46,18 @@ body {
 }
 
 .navSign {
-    font-family: "Open Sans", sans-serif;
     font-weight:bold;
     font-size: 26px;
-    float: right;
     display: block;
     color: #f2f2f2;
     text-align: center;
     padding: 20px 22px;
     text-decoration: none;
+    justify-items:right;
+}
+.navSignSmall {
+    font-size:18px;
+    float:right;
 }
 
 .content {
