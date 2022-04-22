@@ -25,7 +25,7 @@ app.get('', (req, res) => {
 //new IntelCpuScrape();
 //new RyzenMoboScrape();
 //new RadeonGpuScrape();
-new IntelMoboScrape();
+//new IntelMoboScrape();
 
 //  Listen on port 3000
 app.listen(port, () => console.info(`Listening on port ${port}`))

@@ -7,74 +7,102 @@
     <meta charset="utf-8" />
     <title>Code Challenge 2022</title>
 </head>
-    <body>
-        <div class="container-fluid">
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <header>
+                    <ul class="navbar">
+                        <li><a href="">Pc build <br>recommender</a></li>
+                        <li><a href="builder.html">Pc <br>builder</a></li>
+                        <li><a href="peripheral.html">Peripheral <br>Recommender</a></li>
+                    </ul>
+                    <div class="navSign">
+                        <div class="navSignBig">Code Challenge 2022</div>
+                        <div class="navSignSmall">- Pc Recommender</div>
+                    </div>
+                </header><br>
+            </div>
+        </div>
+        <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="topnav">
-                        <a href="">Pc build recommender</a>
-                        <a href="builder.html">Pc builder</a>
-                        <a href="peripheral.html">Peripheral Recommender</a>
+                <div class="col-md-8">
+                    <div class="intro">
+                        <h1>Pc Building</h1>
+                    </div>
+                    <div class="break"></div>
+                    <div class="introSmall">
+                        - For beginners <br>
+                        - Made simple
                     </div>
                 </div>
-            </div>
-            <div class="row">                
-                <div class="col-md-6">
-                    <u>What is this website?</u><br>
+                <div class="col-md-4">
+                    <img src="../images/pcBuild.jpg" class="img-fluid">
+                </div>
+            </div><hr>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="../images/pcBuildExploded.png" class="img-fluid">
+                </div>
+                <div class="col-md-8">
+                    <h1>What is this website?</h1>
                     This website was made so that it would recommend parts to people who do not know too much about computers. This is a Work-In-Progress (WIP)
                     and I plan to add many more features to help newer PC builders! Currently this site only has a Pc part recommender. You can choose your budget, your choice of perfomance,
                     choice of type of CPU (Intel or AMD), and choice of GPU (Geforce or Radeon).
                 </div>
-                <div class="col-md-6">
-                    <u>Notes:</u>
-                    For GPU/CPU balance: balanced is recommend for everyday use, and there usually is no use in only going
-                    intensive on GPU or CPU. If you choose an intensive GPU, you could be limited when playing CPU heavy games,
-                    and the same for the other way around. The CPU intensive choice would be useful if you were only designing a
-                    PC build for video editing, or any media editing.
-                </div>
-            </div>
+            </div><hr>
             <div class="row">
                 <div class="col-md-6">
-                    <u>User inputs:</u> <br>
+                    <h1>User inputs:</h1>
                     <form action="/html/result.html" method="get">
 
                         <label for="budget">Total budget alloted to PC in £:</label>
-                        <input type="number" id="budget" name="budget" required><br>
+                        <input class="inputTextbox" type="number" id="budget" name="budget" required><br>
 
                         <label for="performance">GPU/CPU balance</label>
-                        <select name="performance" id="performance">
-                            <option value="balanced">Balanced</option>
-                            <option value="gpu">GPU intensive - gaming</option>
-                            <option value="cpu">CPU intensive - editing</option>
+                        <select class="inputTextbox" name="performance" id="performance">
+                            <option class="inputTextbox"value="balanced">Balanced</option>
+                            <option class="inputTextbox" value="gpu">GPU intensive - gaming</option>
+                            <option class="inputTextbox"value="cpu">CPU intensive - editing</option>
                         </select><br>
 
                         <label for="cpuChoice">Choice of CPU:</label>
-                        <select name="cpuChoice" id="cpuChoice">
-                            <option value="amd">AMD Ryzen</option>
-                            <option value="intel">Intel Core</option>
-                            <option value="cpuNoPref">No CPU Preference</option>
+                        <select class="inputTextbox" name="cpuChoice" id="cpuChoice">
+                            <option class="inputTextbox" value="amd">AMD Ryzen</option>
+                            <option class="inputTextbox" value="intel">Intel Core</option>
+                            <option class="inputTextbox" value="cpuNoPref">No CPU Preference</option>
                         </select><br>
 
                         <label for="gpuChoice">Choice of GPU:</label>
-                        <select name="gpuChoice" id="gpuChoice">
-                            <option value="geforce">Nvidia Geforce</option>
-                            <option value="radeon">AMD Radeon</option>
-                            <option value="gpuNoPref">No GPU Preference</option>
+                        <select class="inputTextbox" name="gpuChoice" id="gpuChoice">
+                            <option class="inputTextbox" value="geforce">Nvidia Geforce</option>
+                            <option class="inputTextbox" value="radeon">AMD Radeon</option>
+                            <option class="inputTextbox" value="gpuNoPref">No GPU Preference</option>
                         </select><br>
 
-                        <label for="overclock">Any overclocking?</label>
+                        <!--
+                            <label for="overclock">Any overclocking?</label>
                         <select name="overclock" id="overclock">
                             <option value="any">No preference </option>
                             <option value="noc">No overclocking </option>
                             <option value="loc">Light overclocking</option>
                             <option value="hoc">Heavy overclocking</option>
-                        </select><br>
-                        <input type="reset" value="Reset">
-                        <input type="submit" value="Submit">
+                        </select><br> 
+                        -->
+                        <input type="reset" value="Reset" class="buttonSubmit">
+                        <input type="submit" value="Submit" class="buttonSubmit">
                     </form>
+                </div>
+                <div class="col-md-6">
+                    <h5>Notes:</h5>
+                    For GPU/CPU balance: balanced is recommend for everyday use, and there usually is no use in only going
+                    intensive on GPU or CPU. If you choose an intensive GPU, you could be limited when playing CPU heavy games,
+                    and the same for the other way around. The CPU intensive choice would be useful if you were only designing a
+                    PC build for video editing, or any media editing.<br><br>
                 </div>
             </div>
         </div>
-        <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    </body>
+    </div>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
 </html>
