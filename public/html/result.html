@@ -72,42 +72,53 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <div class="topnav">
-                    <a href="">Pc build recommender</a>
-                    <a href="builder.html">Pc builder</a>
-                    <a href="peripheral.html">Peripheral Recommender</a>
+                <header>
+                    <ul class="navbar">
+                        <li><a href="">Pc build <br>recommender</a></li>
+                        <li><a href="builder.html">Pc <br>builder</a></li>
+                        <li><a href="peripheral.html">Peripheral <br>Recommender</a></li>
+                    </ul>
+                    <div class="navSign">
+                        <div class="navSignBig">Code Challenge 2022</div>
+                        <div class="navSignSmall">- Pc Recommender</div>
+                    </div>
+                </header><br>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Pc Build</h2>
+                    This is the result page.
+                    This is what I would recommend based on your choices.<br>
+                    Take a look below:
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="result rounded" id="gpuResult">
+                        <h3>Graphics Card:</h3>
+                        <div id='gpuResultName'></div>
+                        <div id='gpuResultPrice'>Price: &pound;</div>
+                    </div>
+                    <div class="result rounded" id="cpuResult">
+                        <u>Processor (CPU):</u><br>
+                        <div id='cpuResultName'></div>
+                        <div id='cpuResultPrice'>Price: &pound;</div>
+                    </div>
+                    <div class="result rounded" id="moboResult">
+                        <u>Motherboard:</u><br>
+                        <div id='moboResultName'></div>
+                        <div id='moboResultPrice'>Price: &pound;</div>
+                    </div>
+                    <div class="result rounded" id="resultSummary">
+                        <div id='resultTotalPrice'>Total Price: &pound;</div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <u>This is the result page. This is what I would recommend based on your choices.</u><br>
-                Take a look below:
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="result rounded" id="gpuResult">
-                    <u>Graphics Card:</u><br>
-                    <div id='gpuResultName'></div>
-                    <div id='gpuResultPrice'>Price: &pound;</div>
-                </div>
-                <div class="result rounded" id="cpuResult">
-                    <u>Processor (CPU):</u><br>
-                    <div id='cpuResultName'></div>
-                    <div id='cpuResultPrice'>Price: &pound;</div>
-                </div>
-                <div class="result rounded" id="moboResult">
-                    <u>Motherboard:</u><br>
-                    <div id='moboResultName'></div>
-                    <div id='moboResultPrice'>Price: &pound;</div>
-                </div>
-                <div class="result rounded" id="resultSummary">
-                    <div id='resultTotalPrice'>Total Price: &pound;</div>
-                </div>
-            </div>
-        </div>
-    </div> 
+    </div>
+    </div>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 

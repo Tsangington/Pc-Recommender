@@ -26,82 +26,127 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
-                    <div class="intro">
-                        <h1>Pc Building</h1>
-                    </div>
-                    <div class="break"></div>
-                    <div class="introSmall">
-                        - For beginners <br>
-                        - Made simple
+                <div class="col-md-7">
+                    <div class="introFull">
+                        <div class="intro">
+                            <h1>Pc Building</h1>
+                        </div>
+                        <div class="break"></div>
+                        <div class="introSmall">
+                            - For beginners <br>
+                            - Made simple
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-5">
                     <img src="../images/pcBuild.jpg" class="img-fluid">
                 </div>
             </div><hr>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-5">
                     <img src="../images/pcBuildExploded.png" class="img-fluid">
                 </div>
-                <div class="col-md-8">
-                    <h1>What is this website?</h1>
+                <div class="col-md-7">
+                    <h2>What is this website?</h2>
                     This website was made so that it would recommend parts to people who do not know too much about computers. This is a Work-In-Progress (WIP)
                     and I plan to add many more features to help newer PC builders! Currently this site only has a Pc part recommender. You can choose your budget, your choice of perfomance,
                     choice of type of CPU (Intel or AMD), and choice of GPU (Geforce or Radeon).
                 </div>
             </div><hr>
             <div class="row">
-                <div class="col-md-6">
-                    <h1>User inputs:</h1>
-                    <form action="/html/result.html" method="get">
-
-                        <label for="budget">Total budget alloted to PC in £:</label>
+                <h2>User inputs</h2>
+            </div>
+            <form action="/html/result.html" method="get" id="userInput">
+                <div class="row">
+                    <div class="col-md-9">
+                        <h3>Budget</h3>
+                        This is the total budget you are willing to spend on a computer build. Note this does not include peripherals and is only for the actual build itself.
+                        <br><label for="budget">Total budget alloted to PC in £:</label>
                         <input class="inputTextbox" type="number" id="budget" name="budget" required><br>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="../images/money.png" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="../images/videoOrGame.png" class="img-fluid">
+                    </div><br>
+                    <div class="col-md-9">
+                        <h3>Perfomance</h3>
+                        This option is here so you can customise if you want your CPU or CPU to be more powerful. For most people, it is
+                        recommended to choose a balanced setup. However, A more powerful GPU allows for more graphically challenging games to be run at higher frames,
+                        but if the application is CPU demanding, then it may run slower. If you want to edit videos and pictures only, a CPU intensive setup is recommended.
+                        Choose wisely, as each intensive option reduces budget for the other important part.
 
-                        <label for="performance">GPU/CPU balance</label>
+                        <br><label for="performance">GPU/CPU balance</label>
                         <select class="inputTextbox" name="performance" id="performance">
-                            <option class="inputTextbox"value="balanced">Balanced</option>
+                            <option class="inputTextbox" value="balanced">Balanced</option>
                             <option class="inputTextbox" value="gpu">GPU intensive - gaming</option>
-                            <option class="inputTextbox"value="cpu">CPU intensive - editing</option>
+                            <option class="inputTextbox" value="cpu">CPU intensive - editing</option>
                         </select><br>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>Central Processing Unit - CPU</h3>
+                        The remaining options are simply preference. The newest generation of each brand is quite even for the price/perfomance ratio, so perfomance isn't being lost
+                        by choosing the other brand. The central processing unit is used for calulcating everything your computer does, and handles all the information.
 
-                        <label for="cpuChoice">Choice of CPU:</label>
+                        <br><label for="cpuChoice">Choice of CPU:</label>
                         <select class="inputTextbox" name="cpuChoice" id="cpuChoice">
                             <option class="inputTextbox" value="amd">AMD Ryzen</option>
                             <option class="inputTextbox" value="intel">Intel Core</option>
                             <option class="inputTextbox" value="cpuNoPref">No CPU Preference</option>
                         </select><br>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="../images/intelRyzen.jpg" class="img-fluid rounded">
+                    </div><br>
+                </div><br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="../images/nvidiaAmd.jpg" class="img-fluid rounded">
+                    </div><br>
+                    <div class="col-md-8">
+                        <h3>Graphics Card - GPU</h3>
+                        In graphics cards, the price/perfomance ratio is still quite even. Geforce is currently more popular due to more usability features,
+                        since they have been dominating the market for longer. Radeon is the AMD competitor which recently improved their graphics cards massively in order to compete,
+                        but it is still missing a few quality of life features that  geforce already has.<br>
+                        *Warning: Current GPU prices are still quite high due to the COVID pandemic.*
 
-                        <label for="gpuChoice">Choice of GPU:</label>
+                        <br><label for="gpuChoice">Choice of GPU:</label>
                         <select class="inputTextbox" name="gpuChoice" id="gpuChoice">
                             <option class="inputTextbox" value="geforce">Nvidia Geforce</option>
                             <option class="inputTextbox" value="radeon">AMD Radeon</option>
                             <option class="inputTextbox" value="gpuNoPref">No GPU Preference</option>
-                        </select><br>
-
-                        <!--
-                            <label for="overclock">Any overclocking?</label>
-                        <select name="overclock" id="overclock">
-                            <option value="any">No preference </option>
-                            <option value="noc">No overclocking </option>
-                            <option value="loc">Light overclocking</option>
-                            <option value="hoc">Heavy overclocking</option>
-                        </select><br> 
-                        -->
-                        <input type="reset" value="Reset" class="buttonSubmit">
-                        <input type="submit" value="Submit" class="buttonSubmit">
-                    </form>
+                        </select><br><br>
+                        <input type="reset" value="Reset" class="buttonSubmit" form="userInput">
+                        <input type="submit" name="save" value="Submit" class="buttonSubmit" form="userInput">
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <h5>Notes:</h5>
-                    For GPU/CPU balance: balanced is recommend for everyday use, and there usually is no use in only going
-                    intensive on GPU or CPU. If you choose an intensive GPU, you could be limited when playing CPU heavy games,
-                    and the same for the other way around. The CPU intensive choice would be useful if you were only designing a
-                    PC build for video editing, or any media editing.<br><br>
-                </div>
+            </form>
+        </div><br>
+        <!--
+        <div class="row">
+            <div class="col-md-8">
+                <h3>Perfomance</h3>
+                <br>
+                <form action="/html/result.html" method="get" id="userInput">
+                    <label for="overclock">Any overclocking?</label>
+                    <select name="overclock" id="overclock">
+                        <option value="any">No preference </option>
+                        <option value="noc">No overclocking </option>
+                        <option value="loc">Light overclocking</option>
+                        <option value="hoc">Heavy overclocking</option>
+                    </select><br>
+                </form>
             </div>
-        </div>
+            <div class="col-md-4">
+                <img src="../images/" class="img-fluid">
+            </div>
+        </div>    -->
+    </div>
     </div>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </body>

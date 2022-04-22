@@ -1,8 +1,12 @@
 /*content structuring*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 
 .opensans {
     font-family: "Open Sans", sans-serif;
+}
+.secularOne {
+    font-family: 'Secular One', sans-serif;
 }
 * {
     padding: 0px 0px;
@@ -116,14 +120,10 @@ p {
     color: white;
 }
 
-h1 {
-    font-size:30px;
-    text-decoration:underline;
-    font-weight:bold;
-}
+
 h5 {
-    text-decoration:underline;
-    font-weight:bold;
+    text-decoration: underline;
+    font-family: 'Secular One', sans-serif;
 }
 .intro {
     display:flex;
@@ -150,4 +150,24 @@ hr {
 }
 .inputTextbox {
     color:black;
+}
+h1{
+    font-size: 90px;
+    font-family: 'Secular One', sans-serif;
+    text-decoration:underline;
+}
+h2 {
+    font-size: 35px;
+    text-decoration: underline;
+    font-family: 'Secular One', sans-serif;
+}
+h3 {
+    font-size: 30px;
+    text-decoration: underline;
+    font-family: 'Secular One', sans-serif;
+}
+.introSmall {
+    font-size: 30px;
+    float:left;
+    width:60%;
 }
