@@ -1,6 +1,7 @@
 const { json } = require('express');
 const fs = require('fs');
 const { get } = require('https');
+
 module.exports = { GeforceGpuScrape,RadeonGpuScrape, RyzenCpuScrape,IntelCpuScrape , RyzenMoboScrape, IntelMoboScrape};
 //could make one function, change variable names to Name and Price, means save a lot of code,
 //and just give each page a separate name to switch to, so only one instance of puppeteer may be needed.
@@ -49,7 +50,7 @@ function GeforceGpuScrape() {
 
                 //read from existing json file
                 let gpuObject = { "gpuName": nameValue, "gpuPrice": priceValue };
-                let gpuInfojson = fs.readFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/geforceGpuInfo.json", "utf-8");
+                let gpuInfojson = fs.readFileSync("public/js/json/geforceGpuInfo.json", "utf-8");
                 let gpuInfo = JSON.parse(gpuInfojson);
 
                 //push the new gpu listing into the array 
@@ -113,7 +114,7 @@ function RadeonGpuScrape() { //Less radeon GPUs are available on amazon, less po
 
                 //read from existing json file
                 let gpuObject = { "gpuName": nameValue, "gpuPrice": priceValue };
-                let gpuInfojson = fs.readFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/radeonGpuInfo.json", "utf-8");
+                let gpuInfojson = fs.readFileSync("public/js/json/radeonGpuInfo.json", "utf-8");
                 let gpuInfo = JSON.parse(gpuInfojson);
 
                 //push the new gpu listing into the array 
@@ -176,7 +177,7 @@ function RyzenCpuScrape() {
 
                 //read from existing json file
                 let cpuObject = { "cpuName": nameValue, "cpuPrice": priceValue };
-                let cpuInfojson = fs.readFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/ryzenCpuInfo.json", "utf-8");
+                let cpuInfojson = fs.readFileSync("public/js/json/ryzenCpuInfo.json", "utf-8");
                 let cpuInfo = JSON.parse(cpuInfojson);
 
                 //push the new listing into the array 
@@ -239,7 +240,7 @@ function IntelCpuScrape() {
 
                 //read from existing json file
                 let cpuObject = { "cpuName": nameValue, "cpuPrice": priceValue };
-                let cpuInfojson = fs.readFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/intelCpuInfo.json", "utf-8");
+                let cpuInfojson = fs.readFileSync("public/js/json/intelCpuInfo.json", "utf-8");
                 let cpuInfo = JSON.parse(cpuInfojson);
 
                 //push the new listing into the array 
@@ -302,7 +303,7 @@ function RyzenMoboScrape() {
 
                 //read from existing json file
                 let moboObject = { "moboName": nameValue, "moboPrice": priceValue };
-                let moboInfojson = fs.readFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/ryzenMoboInfo.json", "utf-8");
+                let moboInfojson = fs.readFileSync("public/js/json/ryzenMoboInfo.json", "utf-8");
                 let moboInfo = JSON.parse(moboInfojson);
 
                 //push the new listing into the array 
@@ -365,7 +366,7 @@ function IntelMoboScrape() {
 
                 //read from existing json file
                 let moboObject = { "moboName": nameValue, "moboPrice": priceValue };
-                let moboInfojson = fs.readFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/intelMoboInfo.json", "utf-8");
+                let moboInfojson = fs.readFileSync("public/js/json/intelMoboInfo.json", "utf-8");
                 let moboInfo = JSON.parse(moboInfojson);
 
                 //push the new listing into the array 

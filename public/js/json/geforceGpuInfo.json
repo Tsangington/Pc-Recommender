@@ -47,4 +47,8 @@
     "gpuName": "ASUS TUF Gaming GeForce RTX 3080 Ti OC 12GB GDDR6X Graphics Card",
     "gpuPrice": "1072"
   }
+  {
+    "gpuName": "MSI NVIDIA GeForce RTX 3090 Gaming X Trio 24GB GDDR6X Graphics Card",
+    "gpuPrice": "1719"
+  }
 ]

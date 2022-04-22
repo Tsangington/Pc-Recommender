@@ -21,14 +21,14 @@
         //sort info by price, find price to the budget, display.
         // or getGpu();,getCpu();, getMobo();, shorten to 3 methods?
         if (gpuChoice == "geforce") {
-            fetch("geforceGpuInfo.json")
+            fetch("../js/json/geforceGpuInfo.json")
                 .then(response => response.json())
                 .then(geforceGpuInfo => {
                     new getGeforceGpu(geforceGpuInfo);
                 })
         }
         else if (gpuChoice == "radeon") {
-            fetch("radeonGpuInfo.json")
+            fetch("../js/json/radeonGpuInfo.json")
                 .then(response => response.json())
                 .then(radeonGpuInfo => {
                     new getRadeonGpu(radeonGpuInfo);
@@ -39,12 +39,12 @@
         }
 
         if (cpuChoice == "amd") { //moherboard also depends on cpu
-            fetch("ryzenCpuInfo.json")
+            fetch("../js/json/ryzenCpuInfo.json")
                 .then(response => response.json())
                 .then(ryzenCpuInfo => {
                     new getRyzenCpu(ryzenCpuInfo);
                 })
-            fetch("ryzenMoboInfo.json")
+            fetch("../js/json/ryzenMoboInfo.json")
                 .then(response => response.json())
                 .then(ryzenMoboInfo => {
                     new getRyzenMobo(ryzenMoboInfo);
@@ -52,12 +52,12 @@
                 })
         }
         else if (cpuChoice == "intel") {
-            fetch("intelCpuInfo.json")
+            fetch("../js/json/intelCpuInfo.json")
                 .then(response => response.json())
                 .then(intelCpuInfo => {
                     new getIntelCpu(intelCpuInfo);
                 })
-            fetch("intelMoboInfo.json")
+            fetch("../js/json/intelMoboInfo.json")
                 .then(response => response.json())
                 .then(intelMoboInfo => {
                     new getIntelMobo(intelMoboInfo);
