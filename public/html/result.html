@@ -95,29 +95,69 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
-                    <div class="result rounded" id="gpuResult">
-                        <h3>Graphics Card:</h3>
-                        <div id='gpuResultName'></div>
-                        <div id='gpuResultPrice'>Price: &pound;</div>
-                    </div>
-                    <div class="result rounded" id="cpuResult">
-                        <u>Processor (CPU):</u><br>
-                        <div id='cpuResultName'></div>
-                        <div id='cpuResultPrice'>Price: &pound;</div>
-                    </div>
-                    <div class="result rounded" id="moboResult">
-                        <u>Motherboard:</u><br>
-                        <div id='moboResultName'></div>
-                        <div id='moboResultPrice'>Price: &pound;</div>
-                    </div>
-                    <div class="result rounded" id="resultSummary">
-                        <div id='resultTotalPrice'>Total Price: &pound;</div>
-                    </div>
-                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Pc Part</th>
+                            <th scope="col">Part Name</th>
+                            <th scope="col">Part Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">GPU</th>
+                            <td><div id='gpuResultName'></div></td>
+                            <td><div id='gpuResultPrice'>&pound;</div></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">CPU</th>
+                            <td><div id='cpuResultName'></div></td>
+                            <td><div id='cpuResultPrice'>&pound;</div></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Motherboard</th>
+                            <td><div id='moboResultName'></div></td>
+                            <td><div id='moboResultPrice'>&pound;</div></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Total Price:</th>
+                            <td><div id='resultTotalPrice'>&pound;</div></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!--<div class="col-md-12">
+                    <ul>
+                        <li>
+                            <div class="result rounded" id="gpuResult">
+                                <h3>Graphics Card:</h3>
+                                <div id='gpuResultName'></div>
+                                <div id='gpuResultPrice'>Price: &pound;</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="result rounded" id="cpuResult">
+                                <h3>Processor (CPU):</h3>
+                                <div id='cpuResultName'></div>
+                                <div id='cpuResultPrice'>Price: &pound;</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="result rounded" id="moboResult">
+                                <h3>Motherboard:</h3>
+                                <div id='moboResultName'></div>
+                                <div id='moboResultPrice'>Price: &pound;</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="result rounded" id="resultSummary">
+                                <div id='resultTotalPrice'>Total Price: &pound;</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>-->
             </div>
         </div>
-    </div>
     </div>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </body>
