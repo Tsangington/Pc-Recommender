@@ -21,25 +21,7 @@ app.get('', (req, res) => {
     res.sendFile(path.join(__dirname + '/index.html'))
 })
 
-// Support for pkg
-const executablePath =
-    process.env.PUPPETEER_EXECUTABLE_PATH ||
-    (process.pkg
-        ? path.join(
-            path.dirname(process.execPath),
-            'puppeteer',
-            ...puppeteer
-                .executablePath()
-                .split(path.sep)
-                .slice(6), // /snapshot/project/node_modules/puppeteer/.local-chromium
-        )
-        : puppeteer.executablePath());
-
-const browser = puppeteer.launch({
-    executablePath,
-});
-
-new GeforceGpuScrape();
+//new GeforceGpuScrape();
 //new RyzenCpuScrape();
 //new IntelCpuScrape();
 //new RyzenMoboScrape();
