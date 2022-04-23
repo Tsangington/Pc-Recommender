@@ -3,12 +3,23 @@
   "version": "0.0.0",
   "description": "CodeChallenge2022",
   "main": "server.js",
-  "author": {
-    "name": ""
-  },
+  "author": "",
   "dependencies": {
     "bootstrap": "^5.1.3",
     "express": "^4.17.3",
     "puppeteer": "^13.5.2"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tsangington/CodeChallenge2022.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tsangington/CodeChallenge2022/issues"
+  },
+  "homepage": "https://github.com/Tsangington/CodeChallenge2022#readme"
 }
