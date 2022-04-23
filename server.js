@@ -2,10 +2,6 @@ const path = require('path')
 const express = require('express')
 const { GeforceGpuScrape, RadeonGpuScrape, RyzenCpuScrape, IntelCpuScrape, RyzenMoboScrape, IntelMoboScrape } = require('./public/js/webScraper.js')
 const app = express()
-const port = 5000;
-const puppeteer = require('puppeteer');
-
-app.set('port', process.env.PORT || 5000);
 
 // Static Files
 app.use(express.static('public'))
@@ -28,6 +24,10 @@ app.get('', (req, res) => {
 //new RadeonGpuScrape();
 //new IntelMoboScrape();
 
-//  Listen on port 3000
-app.listen(port, () => console.info(`Listening on port ${port}`))
+//  Listen on port 5000
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
+app.listen(port, host, function () {
+    console.log("Server started.......");
+});
 
