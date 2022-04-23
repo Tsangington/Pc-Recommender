@@ -48,7 +48,6 @@
                 .then(response => response.json())
                 .then(ryzenMoboInfo => {
                     new getRyzenMobo(ryzenMoboInfo);
-                    getTotalPrice();
                 })
         }
         else if (cpuChoice == "intel") {
@@ -61,13 +60,14 @@
                 .then(response => response.json())
                 .then(intelMoboInfo => {
                     new getIntelMobo(intelMoboInfo);
-                    getTotalPrice();
                 })
         }
         else {
             //merge cpu files, choose cpu closest to budget, find intel or ryzen cpu, choose
             //mobo depending on choice of algorithm.
         }
+        setTimeout(() => { getTotalPrice(); }, 250);
+
     </script>
     <div class="container-fluid">
         <div class="row">
