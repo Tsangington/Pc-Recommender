@@ -14,7 +14,7 @@ app.use('/html', express.static(__dirname + 'public/html'))
 app.set('views', './views')
 
 app.get('', (req, res) => {
-    res.sendFile(path.join(__dirname + '/index.html'))
+    res.sendFile(path.join(__dirname + '/public/html/index.html'))
 })
 
 //new GeforceGpuScrape();
@@ -24,7 +24,7 @@ app.get('', (req, res) => {
 //new RadeonGpuScrape();
 //new IntelMoboScrape();
 
-//  Listen on port 5000
+//  Listen on port 3000
 const host = '0.0.0.0';
 const port = process.env.PORT || 3000;
 app.listen(port, host, function () {
