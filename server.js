@@ -17,7 +17,7 @@ app.get('', (req, res) => {
     res.sendFile(path.join(__dirname + '/public/html/index.html'))
 })
 
-new GeforceGpuScrape();
+//new GeforceGpuScrape();
 //new RyzenCpuScrape();
 //new IntelCpuScrape();
 //new RyzenMoboScrape();
