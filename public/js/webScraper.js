@@ -59,7 +59,7 @@ function GeforceGpuScrape() {
                 //stringify into JSON notation before writing back into file
                 gpuInfojson = JSON.stringify(gpuInfo, null, 2);
                 //code not needed for now, already have test data in file
-                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/geforceGpuInfo.json, gpuInfojson, "utf-8");
+                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/js/json/geforceGpuInfo.json", gpuInfojson, "utf-8");
                 console.log(gpuInfojson);
             }
         }
@@ -123,7 +123,7 @@ function RadeonGpuScrape() { //Less radeon GPUs are available on amazon, less po
                 //stringify into JSON notation before writing back into file
                 gpuInfojson = JSON.stringify(gpuInfo, null, 2);
                 //code not needed for now, already have test data in file
-                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/radeonGpuInfo.json, gpuInfojson, "utf-8");
+                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/js/json/radeonGpuInfo.json", gpuInfojson, "utf-8");
                 console.log(gpuInfojson);
             }
         }
@@ -186,7 +186,7 @@ function RyzenCpuScrape() {
                 //stringify into JSON notation before writing back into file
                 cpuInfojson = JSON.stringify(cpuInfo, null, 2);
                 //code not needed for now, already have test data in file
-                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/ryzenCpuInfo.json", cpuInfojson, "utf-8");
+                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/js/json/ryzenCpuInfo.json", cpuInfojson, "utf-8");
                 console.log(cpuInfojson)
             }
         }
@@ -249,7 +249,7 @@ function IntelCpuScrape() {
                 //stringify into JSON notation before writing back into file
                 cpuInfojson = JSON.stringify(cpuInfo, null, 2);
                 //code not needed for now, already have test data in file
-                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/intelCpuInfo.json", cpuInfojson, "utf-8");
+                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/js/json/intelCpuInfo.json", cpuInfojson, "utf-8");
                 console.log(cpuInfojson)
             }
         }
@@ -312,7 +312,7 @@ function RyzenMoboScrape() {
                 //stringify into JSON notation before writing back into file
                 moboInfojson = JSON.stringify(moboInfo, null, 2);
                 //code not needed for now, already have test data in file
-                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/ryzenMoboInfo.json", moboInfojson, "utf-8");
+                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/js/json/ryzenMoboInfo.json", moboInfojson, "utf-8");
                 console.log(moboInfojson)
             }
         }
@@ -375,7 +375,7 @@ function IntelMoboScrape() {
                 //stringify into JSON notation before writing back into file
                 moboInfojson = JSON.stringify(moboInfo, null, 2);
                 //code not needed for now, already have test data in file
-                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/html/ryzenMoboInfo.json", intelInfojson, "utf-8");
+                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/js/json/ryzenMoboInfo.json", intelInfojson, "utf-8");
                 console.log(moboInfojson)
             }
         }

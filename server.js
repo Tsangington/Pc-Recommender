@@ -17,7 +17,7 @@ app.get('', (req, res) => {
     res.sendFile(path.join(__dirname + '/public/html/index.html'))
 })
 
-//new GeforceGpuScrape();
+new GeforceGpuScrape();
 //new RyzenCpuScrape();
 //new IntelCpuScrape();
 //new RyzenMoboScrape();
@@ -28,6 +28,6 @@ app.get('', (req, res) => {
 const host = '0.0.0.0';
 const port = process.env.PORT || 3000;
 app.listen(port, host, function () {
-    console.log("Server started.......");
+    console.log("Server started.");
 });
 

@@ -12,7 +12,6 @@
   "scripts": {
     "start": "node server.js"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Tsangington/CodeChallenge2022.git"
@@ -21,5 +20,17 @@
   "bugs": {
     "url": "https://github.com/Tsangington/CodeChallenge2022/issues"
   },
-  "homepage": "https://github.com/Tsangington/CodeChallenge2022#readme"
+  "homepage": "https://github.com/Tsangington/CodeChallenge2022#readme",
+  "pkg": {
+    "scripts": [],
+    "assets": [
+      "public/html/index.html",
+      "public/html/result.html",
+      "public/html/builder.html",
+      "public/html/peripheral.html"
+
+    ]
+
+  },
+  "bin": "server.js"
 }
