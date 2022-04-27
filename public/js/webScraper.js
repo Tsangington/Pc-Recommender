@@ -29,7 +29,7 @@ function GeforceGpuScrape() {
             await page.setViewport({ width: 1366, height: 800 });
             await page.goto('https://www.amazon.co.uk/s?k=geforce+gpu&rh=n%3A340831031%2Cn%3A430500031&dc&crid=1Y5BCLL47Y56C&qid=1649589532&rnid=1642204031&sprefix=%2Caps%2C52&ref=sr_nr_n_2', { waitUntil: 'load', timeout: 30000 });
 
-            for (let i = 5; i < 20; i++) {
+            for (let i = 6; i < 20; i++) {
                 // Selector for the card name
                 let cardName = 'div.s-desktop-width-max.s-desktop-content.s-opposite-dir.sg-row > div.s-matching-dir.sg-col-16-of-20.sg-col.sg-col-8-of-12.sg-col-12-of-16 > div > span:nth-child(4) > div.s-main-slot.s-result-list.s-search-results.sg-row > div:nth-child('+i+') > div > div > div > div > div > div.sg-col.sg-col-4-of-12.sg-col-8-of-16.sg-col-12-of-20.s-list-col-right > div > div > div.a-section.a-spacing-none.s-padding-right-small.s-title-instructions-style > h2 > a > span';
                 let r = await page.waitForSelector(cardName);
@@ -59,7 +59,7 @@ function GeforceGpuScrape() {
                 //stringify into JSON notation before writing back into file
                 gpuInfojson = JSON.stringify(gpuInfo, null, 2);
                 //code not needed for now, already have test data in file
-                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/js/json/geforceGpuInfo.json", gpuInfojson, "utf-8");
+                //fs.writeFileSync("public/js/json/geforceGpuInfo.json", gpuInfojson, "utf-8");
                 console.log(gpuInfojson);
             }
         }
@@ -123,7 +123,7 @@ function RadeonGpuScrape() { //Less radeon GPUs are available on amazon, less po
                 //stringify into JSON notation before writing back into file
                 gpuInfojson = JSON.stringify(gpuInfo, null, 2);
                 //code not needed for now, already have test data in file
-                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/js/json/radeonGpuInfo.json", gpuInfojson, "utf-8");
+                //fs.writeFileSync("public/js/json/radeonGpuInfo.json", gpuInfojson, "utf-8");
                 console.log(gpuInfojson);
             }
         }
@@ -186,7 +186,7 @@ function RyzenCpuScrape() {
                 //stringify into JSON notation before writing back into file
                 cpuInfojson = JSON.stringify(cpuInfo, null, 2);
                 //code not needed for now, already have test data in file
-                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/js/json/ryzenCpuInfo.json", cpuInfojson, "utf-8");
+                //fs.writeFileSync("public/js/json/ryzenCpuInfo.json", cpuInfojson, "utf-8");
                 console.log(cpuInfojson)
             }
         }
@@ -249,7 +249,7 @@ function IntelCpuScrape() {
                 //stringify into JSON notation before writing back into file
                 cpuInfojson = JSON.stringify(cpuInfo, null, 2);
                 //code not needed for now, already have test data in file
-                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/js/json/intelCpuInfo.json", cpuInfojson, "utf-8");
+                //fs.writeFileSync("public/js/json/intelCpuInfo.json", cpuInfojson, "utf-8");
                 console.log(cpuInfojson)
             }
         }
@@ -312,7 +312,7 @@ function RyzenMoboScrape() {
                 //stringify into JSON notation before writing back into file
                 moboInfojson = JSON.stringify(moboInfo, null, 2);
                 //code not needed for now, already have test data in file
-                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/js/json/ryzenMoboInfo.json", moboInfojson, "utf-8");
+                //fs.writeFileSync("public/js/json/ryzenMoboInfo.json", moboInfojson, "utf-8");
                 console.log(moboInfojson)
             }
         }
@@ -375,7 +375,7 @@ function IntelMoboScrape() {
                 //stringify into JSON notation before writing back into file
                 moboInfojson = JSON.stringify(moboInfo, null, 2);
                 //code not needed for now, already have test data in file
-                //fs.writeFileSync("D:/Users/harry/source/repos/CodeChallenge2022/public/js/json/ryzenMoboInfo.json", intelInfojson, "utf-8");
+                //fs.writeFileSync("public/js/json/intelMoboInfo.json", moboInfojson, "utf-8");
                 console.log(moboInfojson)
             }
         }
