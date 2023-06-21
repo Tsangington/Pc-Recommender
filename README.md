@@ -10,7 +10,7 @@ More detailed instructions can be found in PcRecommender.docx
 
 I also have hosted the website only side on heroku.com, at:
 
-'https://pc-recommender.herokuapp.com/'
+'https://pc-recommender.herokuapp.com/' (Deprecated)
 
 Github: 'https://github.com/Tsangington/Pc-Recommender'
 
